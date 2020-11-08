@@ -22,6 +22,7 @@ var additonOptions = ['Achchiq', 'Sosiskali'];
 /* ================================================
 Add addEventListener to FormPizza
 ================================================ */
+
 elFormPizza.addEventListener('submit', function (evt) {
   evt.preventDefault();
 });
