@@ -9,6 +9,7 @@ var elAdditionsBox = elFormPizza.querySelector('.js-additions__box');
 var elSelectSizeResult = elFormPizza.querySelector('.js-selection__size-result');
 var elRadioWidthResult = elFormPizza.querySelector('.js-radio__size-box-result');
 var elProductsResult = elFormPizza.querySelector('.js-poducts-result');
+var elAdditionsResult = elFormPizza.querySelector('.js-additions-result');
 
 
 // All existing Menu 
@@ -88,10 +89,13 @@ for (var i = 0; i < widthOptions.length; i++) {
   });
 
 };
-var productsChoosen = [];
+
+
 /* =================================================
 SELECT PRODUCTS BOX
 ================================================= */
+
+var productsChoosen = [];
 
 for (var i = 0; i < productOptions.length; i++) {
 
@@ -101,7 +105,7 @@ for (var i = 0; i < productOptions.length; i++) {
   elNewProductsLabel.textContent = productOptions[i];
   elProductsBox.appendChild(elNewProductsLabel);
 
-  // Create input radios to labels
+  // Create input checkboxes to labels
   var elNewProductsInput = document.createElement('input');
   elNewProductsInput.setAttribute('value', productOptions[i]);
   elNewProductsInput.setAttribute('name', 'products');
@@ -122,7 +126,47 @@ for (var i = 0; i < productOptions.length; i++) {
     }
 
     elProductsResult.textContent = productsChoosen.join(', ');
-    console.log(productsChoosen);
+    // console.log(productsChoosen);
+  });
+
+};
+
+/* =================================================
+SELECT PRODUCTS BOX
+================================================= */
+
+var additionsChoosen = [];
+
+for (var i = 0; i < additonOptions.length; i++) {
+
+  // Create labels to input checkbox
+  var elAdditionsLabel = document.createElement('label');
+  elAdditionsLabel.classList.add('align-items-center', 'mr-3', 'p-1', 'border');
+  elAdditionsLabel.textContent = additonOptions[i];
+  elAdditionsBox.appendChild(elAdditionsLabel);
+
+  // Create input checkboxes to labels
+  var elAdditionsInput = document.createElement('input');
+  elAdditionsInput.setAttribute('value', additonOptions[i]);
+  elAdditionsInput.setAttribute('name', 'products');
+  elAdditionsInput.setAttribute('type', 'checkbox');
+  elAdditionsInput.classList.add('ml-1');
+  elAdditionsLabel.appendChild(elAdditionsInput);
+
+
+
+  // Add eventListener and check weather checkbox checked 
+  elAdditionsInput.addEventListener('change', function () {
+
+    if (additionsChoosen.includes(this.value)) {
+      var productIndex = additionsChoosen.indexOf(this.value);
+      additionsChoosen.splice(productIndex, 1);
+    } else {
+      additionsChoosen.push(this.value);
+    }
+
+    elAdditionsResult.textContent = additionsChoosen.join(', ');
+    // console.log(additionsChoosen);
   });
 
 };

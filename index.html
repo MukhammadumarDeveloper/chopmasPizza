@@ -9,9 +9,9 @@
   <title>Chopmas Pitsa</title>
 </head>
 
-<body>
+<body class="bg-light">
   <div class="container">
-    <h1 class=" text-center h3 text-danger">
+    <h1 class=" text-center h3 text-danger my-4">
       <img src="img/pizza-rounded.png" alt="" width="80" height="80">
       Pitsa buyurtma qilish
     </h1>
@@ -21,24 +21,24 @@
     ====================================== -->
       <div class="survey__wrapper col-12 col-md-8 border-right">
         <!-- Selection -->
-        <div class="form-group">
-          <label class="h5" for="selection">Noni qanday bo`lsin?</label>
+        <div class="form-group border-bottom pb-4">
+          <label class="h6 text-danger font-weight-bold" for="selection">Noni qanday bo`lsin?</label>
           <select class="js-selection__size custom-select" name="selection_size" id="selection">
             <option value="select size" selected disabled>Non hajmi</option>
           </select>
         </div>
         <!-- Radio size box -->
-        <div class="form-group">
-          <h2 class="h5">Kattaligi</h2>
+        <div class="form-group  border-bottom pb-3">
+          <h2 class="h6 text-danger font-weight-bold">Kattaligi</h2>
           <div class="js-radio__size-box d-flex align-items-center"></div>
         </div>
         <!-- Products box -->
-        <div class="form-group js-products__box ">
-          <h2 class="h5">Ustiga nima solaylik?</h2>
+        <div class="form-group js-products__box  border-bottom pb-3">
+          <h2 class="h6 text-danger font-weight-bold">Ustiga nima solaylik?</h2>
         </div>
         <!-- Additions box -->
-        <div class="form-group js-additions__box">
-          <h2 class="h5">Qo`shimchalar</h2>
+        <div class="form-group js-additions__box  border-bottom pb-3">
+          <h2 class="h6 text-danger font-weight-bold">Qo`shimchalar</h2>
         </div>
       </div>
       <!-- ===========================================
@@ -47,29 +47,30 @@
       <div class="result__wrapper col-12 col-md-4">
         <!-- Selection Result -->
         <div class="form-group">
-          <p class="font-weight-bold">Non:
-            <span class="js-selection__size-result font-weight-normal font-italic"></span>
+          <p class="font-weight-bold text-danger">Non:
+            <span class="text-dark js-selection__size-result font-weight-normal font-italic"></span>
           </p>
         </div>
         <!-- Radio size box Result -->
         <div class="form-group">
-          <p class="font-weight-bold">Kattaligi:
-            <span class="js-radio__size-box-result font-weight-normal font-italic"></span>
+          <p class="font-weight-bold text-danger">Kattaligi:
+            <span class="text-dark js-radio__size-box-result font-weight-normal font-italic"></span>
           </p>
         </div>
         <!-- Products box Result -->
         <div class="form-group">
-          <p class="font-weight-bold">Ustida:
-            <span class="js-poducts-result font-weight-normal d-block"></span>
+          <p class="font-weight-bold text-danger">Ustida:
+            <span class="text-dark js-poducts-result font-weight-normal d-block"></span>
           </p>
         </div>
         <!-- Additions box Result -->
         <div class="form-group">
-          <p class="font-weight-bold js-additions-result">Qo`shimcha:
+          <p class="font-weight-bold text-danger">Qo`shimcha:
+            <span class="text-dark  js-additions-result font-weight-normal d-block"></span>
           </p>
         </div>
         <!-- Order button -->
-        <button class="btn btn-danger" type="submit">Buyurtma berish</button>
+        <button class="btn btn-danger text-light" type="submit">Buyurtma berish</button>
       </div>
     </form>
   </div>
