@@ -6,11 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Document</title>
+  <title>Chopmas Pitsa</title>
 </head>
 
 <body>
-
+  <div class="container">
+    <h1 class=" text-center">Pitsa buyurtma qilish</h1>
+    <form class="main-form__wrapper row" method="POST" action="https://echo.htmlacademy.ru/">
+      <!-- ======================================
+    SURVEY WRAPPER
+    ====================================== -->
+      <div class="survey__wrapper col-8 border-right">
+        <!-- Selection -->
+        <div class="form-group">
+          <label class="h5" for="selection">Noni qanday bo`lsin?</label>
+          <select class="js-selection__size custom-select" name="selection_size" id="selection">
+            <option value="select size" selected disabled>Non hajmi</option>
+          </select>
+        </div>
+        <!-- Radio size box -->
+        <div class="form-group">
+          <h2 class="h5">Kattaligi</h2>
+          <div class="js-radio__size-box d-flex align-items-center"></div>
+        </div>
+        <!-- Products box -->
+        <div class="form-group js-products__box">
+          <h2 class="h5">Ustiga nima solaylik?</h2>
+        </div>
+        <!-- Additions box -->
+        <div class="form-group js-additions__box">
+          <h2 class="h5">Qo`shimchalar</h2>
+        </div>
+      </div>
+      <!-- ===========================================
+    RESULT WRAPPER
+    ========================================== -->
+      <div class="result__wrapper col-4">
+        <!-- Selection Result -->
+        <div class="form-group">
+          <p class="font-weight-bold">Non:
+            <span class="js-selection__size-result font-weight-normal font-italic"></span>
+          </p>
+        </div>
+        <!-- Radio size box Result -->
+        <div class="form-group">
+          <p class="font-weight-bold">Kattaligi:
+            <span class="js-radio__size-box-result font-weight-normal font-italic"></span>
+          </p>
+        </div>
+        <!-- Products box Result -->
+        <div class="form-group">
+          <p class="font-weight-bold js-poducts-result">Ustida:
+          </p>
+        </div>
+        <!-- Additions box Result -->
+        <div class="form-group">
+          <p class="font-weight-bold js-additions-result">Qo`shimcha:
+          </p>
+        </div>
+        <!-- Order button -->
+        <button class="btn btn-danger" type="submit">Buyurtma berish</button>
+      </div>
+    </form>
+  </div>
 
 
 
