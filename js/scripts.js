@@ -29,15 +29,15 @@ elFormPizza.addEventListener('submit', function (evt) {
 
 
 /* =================================================
-SELECT SIZE
+Select size
 ================================================= */
 
 // Add options to elSelectSize
 for (var i = 0; i < sizeOptions.length; i++) {
-  var newSelectOption = document.createElement('option');
-  newSelectOption.setAttribute('value', sizeOptions[i]);
-  newSelectOption.textContent = sizeOptions[i];
-  elSelectSize.appendChild(newSelectOption);
+  var elNewSelectOption = document.createElement('option');
+  elNewSelectOption.setAttribute('value', sizeOptions[i]);
+  elNewSelectOption.textContent = sizeOptions[i];
+  elSelectSize.appendChild(elNewSelectOption);
 };
 
 elSelectSize.addEventListener('change', function (evt) {
@@ -58,29 +58,29 @@ elSelectSize.addEventListener('change', function (evt) {
 
 
 /* =================================================
-SELECT WIDTH
+Select width
 ================================================= */
 
 // Add options to elRadioWidth
 for (var i = 0; i < widthOptions.length; i++) {
 
   // Create labels to input radios
-  var elnewWidthOptionLabel = document.createElement('label');
-  elnewWidthOptionLabel.classList.add('d-flex', 'align-items-center', 'mr-5', 'px-2', 'py-4',
+  var elNewWidthOptionLabel = document.createElement('label');
+  elNewWidthOptionLabel.classList.add('d-flex', 'align-items-center', 'mr-5', 'px-2', 'py-4',
     'rounded-circle', 'border');
-  elnewWidthOptionLabel.textContent = widthOptions[i];
-  elRadioWidth.appendChild(elnewWidthOptionLabel);
+  elNewWidthOptionLabel.textContent = widthOptions[i];
+  elRadioWidth.appendChild(elNewWidthOptionLabel);
 
   // Create input radios to labels
-  var elnewWidthOptionInput = document.createElement('input');
-  elnewWidthOptionInput.setAttribute('value', widthOptions[i]);
-  elnewWidthOptionInput.setAttribute('name', 'pizza_width');
-  elnewWidthOptionInput.setAttribute('type', 'radio');
-  elnewWidthOptionInput.classList.add('ml-1');
-  elnewWidthOptionLabel.appendChild(elnewWidthOptionInput)
+  var elNewWidthOptionInput = document.createElement('input');
+  elNewWidthOptionInput.setAttribute('value', widthOptions[i]);
+  elNewWidthOptionInput.setAttribute('name', 'pizza_width');
+  elNewWidthOptionInput.setAttribute('type', 'radio');
+  elNewWidthOptionInput.classList.add('ml-1');
+  elNewWidthOptionLabel.appendChild(elNewWidthOptionInput)
 
   // Add eventListener and check weather radio checked 
-  elnewWidthOptionInput.addEventListener('change', function () {
+  elNewWidthOptionInput.addEventListener('change', function () {
     var widthChoosen = [];
     if (this.checked) {
       widthChoosen.push(this.value);
@@ -93,7 +93,7 @@ for (var i = 0; i < widthOptions.length; i++) {
 
 
 /* =================================================
-SELECT PRODUCTS BOX
+Select products box
 ================================================= */
 
 var productsChoosen = [];
@@ -160,8 +160,8 @@ for (var i = 0; i < additonOptions.length; i++) {
   elAdditionsInput.addEventListener('change', function () {
 
     if (additionsChoosen.includes(this.value)) {
-      var productIndex = additionsChoosen.indexOf(this.value);
-      additionsChoosen.splice(productIndex, 1);
+      var additionIndex = additionsChoosen.indexOf(this.value);
+      additionsChoosen.splice(additionIndex, 1);
     } else {
       additionsChoosen.push(this.value);
     }
