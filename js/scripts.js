@@ -13,7 +13,7 @@ var elAdditionsResult = elFormPizza.querySelector('.js-additions-result');
 
 
 // All existing Menu 
-var sizeOptions = ['yupqa', 'o`rta', 'qalin'];
+var sizeOptions = ['Yupqa', 'O`rta', 'Qalin', 'Bo`lka non'];
 var widthOptions = ['25 cm', '30 cm', '35 cm'];
 var productOptions = ['Pomidor', 'Kurka go`shti', 'Zaytun', 'Tuzlangan bodring', 'Qo`ziqorin', 'Qazi'];
 var additonOptions = ['Achchiq', 'Sosiskali'];
